@@ -1,0 +1,234 @@
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --darker-cyan: hsl(159, 36%, 26%);
+}
+
+/* Reset all styles to default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a few elements to default styles */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Reset typography to a more standard baseline */
+body {
+    line-height: 1;
+}
+
+/* Remove default list styles */
+ol,
+ul {
+    list-style: none;
+}
+
+/* Set link styles to prevent underlines */
+a {
+    text-decoration: none;
+}
+
+/* ================================================================= */
+
+/* Code Start Here  */
+
+html {
+    font-family: 'Montserrat', 'Fraunces';
+}
+
+body {
+    background-color: var(--cream);
+}
+
+.container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 40rem;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 6rem;
+    margin-bottom: 10%;
+    border-radius: 15px;
+
+}
+
+.img-container {
+    background-image: url("./images/image-product-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px 0 0 15px;
+}
+
+.desc-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    color: var(--dark-grayish-blue);
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    line-height: 2.7rem;
+    color: var(--very-dark-blue);
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.5rem;
+    color: var(--dark-grayish-blue);
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.price-container p {
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--dark-cyan);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.price-container p span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+.price-container a {
+    background-color: var(--dark-cyan);
+    border: 1px solid var(--dark-cyan);
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 0.9rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    transition: all ease-in-out 0.2s
+}
+
+.attribution {
+    position: absolute;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width:710px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 15rem 1fr;
+        margin-top: 10%;
+        height: 100%;
+    }
+
+    .img-container {
+        background-image: url("./images/image-product-mobile.jpg");
+        border-radius: 15px 15px 0 0;
+    }
+}
+
+@media (hover:hover) {
+    .price-container a:hover {
+        background-color: var(--darker-cyan);
+        transition: all ease-in-out 0.2s;
+    }
+}
